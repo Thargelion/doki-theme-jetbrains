@@ -8,6 +8,11 @@ Doki Theme: Jetbrains IDEs
 
 ### https://doki-theme.unthrottled.io/
 
+> Notice: This fork of the Doki Theme is not officially supported by the Doki Theme team. If you want the official
+> version, please install it from the JetBrains Marketplace. I am building this in order to be compatible with newer
+> versions of Jetbrains IDE earlier.
+> My solely task is update gradle versions and dependencies to keep it working with the latest IDEs.
+
 ## Quick Theme Preview
 
 ![Themes](./assets/screenshots/themes.webp)
@@ -15,7 +20,6 @@ Doki Theme: Jetbrains IDEs
 <div align="center"> 
     <h3>Code Font <a href="https://rubjo.github.io/victor-mono/">Victor Mono</a></h3>
 </div>
-
 
 # [Complete Theme Album.](./albums/complete_theme_album.md)
 
@@ -77,9 +81,9 @@ You can choose themes based on characters from these various Anime, Manga, or Vi
 
 - Manually:
 
-  Download the [latest release](https://github.com/doki-theme/doki-theme-jetbrains/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/doki-theme/doki-theme-jetbrains/releases/latest) and install it
+  manually using
   <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
 
 ---
 
@@ -101,8 +105,8 @@ You can choose themes based on characters from these various Anime, Manga, or Vi
       - [Promotional Content](#promotional-content)
   - [Fonts](#fonts)
 - [Miscellaneous](#miscellaneous)
-  - [Custom Icons](#doki-icons) 
-  - [Contributing](#contributing) 
+  - [Custom Icons](#doki-icons)
+  - [Contributing](#contributing)
   - [Quick Theme Switch](#quick-theme-switch)
   - [Theme Requests](#theme-requests)
   - [Plugin Art](#plugin-art)
@@ -113,7 +117,7 @@ You can choose themes based on characters from these various Anime, Manga, or Vi
 
 # Configuration
 
-You can access the settings menu here: 
+You can access the settings menu here:
 
 <kbd>Preferences</kbd> > <kbd>Appearance & Behavior</kbd> > <kbd>Doki Theme Settings</kbd>
 
@@ -125,7 +129,7 @@ You can access the settings menu here:
 
 This allows you to control the decoration of your IDE.
 
-You can be a conservative weeb or an obvious otaku. 
+You can be a conservative weeb or an obvious otaku.
 Customize to your heart's content!
 
 ## Discreet Mode
@@ -135,14 +139,14 @@ Customize to your heart's content!
 Are you still a closeted weeb? Do you still feel shame about liking anime? Does your job require you to not have fun?
 Instead of addressing the real problems, you can just make your problems invisible with `Discreet Mode`!
 This will clear any anime content from the IDE, and will even hide the theme name in the status bar. That way
-you do not have to explain anything, to anyone (except for the heart themed folder icons). 
+you do not have to explain anything, to anyone (except for the heart themed folder icons).
 When the coast is clear, just uncheck the config or toggle the action, and your previous settings will be restored.
 
-
-This plugin is also integrated with the [Anime Meme Plugin](https://github.com/ani-memes/AMII#discreet-mode), for the ultimate shame hiding experience.
-Enabling/disabling `Discreet Mode` for this plugin will enable/disable `Discrete Mode` in the other plugin. However, this does not work the other way around. 
+This plugin is also integrated with the [Anime Meme Plugin](https://github.com/ani-memes/AMII#discreet-mode), for the
+ultimate shame hiding experience.
+Enabling/disabling `Discreet Mode` for this plugin will enable/disable `Discrete Mode` in the other plugin. However,
+this does not work the other way around.
 Only the Doki Theme can enable/disable modes across plugins.
-
 
 #### Sticker
 
@@ -151,14 +155,15 @@ Only the Doki Theme can enable/disable modes across plugins.
 **Allow Positioning** allows you to move your cute sticker out of the way when you need to read the logs.
 You won't be able to click through the sticker though, so you'll need to move it or toggle this action.
 
-**Note:** [small stickers](#small-stickers) will ignore this setting. All small stickers are movable by default because their windows are not uniform.
+**Note:** [small stickers](#small-stickers) will ignore this setting. All small stickers are movable by default because
+their windows are not uniform.
 So they may need to be moved base on which window they show up in.
 
 **Mai Dark**
 
 ![Moveable Sticker](./assets/readmeAssets/moveable_stickers.gif)
 
-**Use Custom Sticker** allows you to be able to set the image to be used for all the doki-themes. 
+**Use Custom Sticker** allows you to be able to set the image to be used for all the doki-themes.
 Custom stickers will remain on your IDE for as long as this checkbox is activated.
 Allowed image types: jpg, png, gif
 
@@ -191,9 +196,8 @@ Types of distinct windows:
 - Secondary window (the one where you drag a tab out of the IDE window)
 - Any Dialog Window
 
-**Reset Margin** allows you to restore the original default margins for all windows. 
+**Reset Margin** allows you to restore the original default margins for all windows.
 This will also move all active stickers back to the default position.
-
 
 #### Content Type
 
@@ -214,24 +218,28 @@ Themes that have more than one sticker:
 
 **Monika Dark**
 
-  ![Secondary Sticker](./assets/readmeAssets/secondary_stickers.gif)
+![Secondary Sticker](./assets/readmeAssets/secondary_stickers.gif)
 
 #### Dimension Cap
 
-Stickers are sometimes big and could get in the way. Thankfully, if you find that this is the case, you can cap the maximum dimensions of the primary displayed sticker. This also works for custom stickers as well!
+Stickers are sometimes big and could get in the way. Thankfully, if you find that this is the case, you can cap the
+maximum dimensions of the primary displayed sticker. This also works for custom stickers as well!
 
-I want to maintain the original aspect ratio of the image, so I will take the largest dimension and cap the maximum dimension to that it to
+I want to maintain the original aspect ratio of the image, so I will take the largest dimension and cap the maximum
+dimension to that it to
 that. That way you can still see the same image, just smaller.
 
 `-1` is the default behavior and does not constrain the dimension of the sticker
 
 #### Small Stickers
 
-With the introduction of [Dimension Capping](#dimension-cap), you can now satisfy your need to have stickers in all the places!
+With the introduction of [Dimension Capping](#dimension-cap), you can now satisfy your need to have stickers in all the
+places!
 
-All small stickers are put in dialog windows whose height is greater than a specified limit. That way you do not end up with a sticker getting in the way.
+All small stickers are put in dialog windows whose height is greater than a specified limit. That way you do not end up
+with a sticker getting in the way.
 
-All small stickers are also move-able by default, that way you can scoot them out of the way. 
+All small stickers are also move-able by default, that way you can scoot them out of the way.
 Meaning that they ignore the `Allow Positioning` setting.
 
 **Megumin**
@@ -250,8 +258,7 @@ This feature will set the background image to the current theme's official wallp
 
 ![Editor Wallpaper](./assets/readmeAssets/wallpaper_setting.png)
 
-
-**Empty Editor Background** sets the background image of the frame, 
+**Empty Editor Background** sets the background image of the frame,
 that appears when all tabs are closed, with the current theme's official wallpaper.
 
 **Asuna Dark**
@@ -275,15 +282,13 @@ Applies for the following content:
 
 - Rias Onyx: Secondary Content
 
-
 #### Misc Content Settings
 
-**Name in status bar** will put the name of the character, your current theme is based on, in the status bar. 
+**Name in status bar** will put the name of the character, your current theme is based on, in the status bar.
 
 **Aqua**
 
 ![image](https://user-images.githubusercontent.com/15972415/108612695-aedba280-73b0-11eb-8e59-2e3229918111.png)
-
 
 ### Other Settings
 
@@ -301,7 +306,8 @@ You can see a rough example in the [quick theme switch section.](#quick-theme-sw
 ### Promotional Content
 
 I am a weeb who builds a lot of neat weebie things. A lot of which I think you will enjoy.
-By default, I have opted you into receiving a _single_ promotion to the [AniMeme Plugin](https://github.com/ani-memes/AMII#amii-anime-meme-ide-integration).
+By default, I have opted you into receiving a _single_ promotion to
+the [AniMeme Plugin](https://github.com/ani-memes/AMII#amii-anime-meme-ide-integration).
 This notification window _will_ show up when your IDE has been idle, and you've met these following conditions:
 
 - You are online
@@ -309,22 +315,23 @@ This notification window _will_ show up when your IDE has been idle, and you've 
 - It's been at least 7 days since you've installed the Doki Theme.
 
 You will also only ever see the promotion once on each machine, the config is shared across IDEs on your machine.
-You can opt yourself out at any time before then. 
-**Note**: if you've opted out, for the best experience, be sure to restart any of your open IDEs (eg: Intellij, Webstorm) if you have the Doki Theme installed across IDEs.
+You can opt yourself out at any time before then.
+**Note**: if you've opted out, for the best experience, be sure to restart any of your open IDEs (eg: Intellij,
+Webstorm) if you have the Doki Theme installed across IDEs.
 
 I'm only promoting one item, and that isn't going to change anytime soon.
 Thanks for your understanding and I hope you enjoy the stuff I've built!
 
 ## Fonts
 
-Since the JetBrains IDEs don't have a convenient way to globally apply font changes across color schemes, I had to make my own.
+Since the JetBrains IDEs don't have a convenient way to globally apply font changes across color schemes, I had to make
+my own.
 
 **Global Editor Font Size** will override any/all font size settings for your code editor font size.
 This only applies to any Doki Themes. You must enable the `Override Editor Font Size` for this feature to take effect.
 
 **Global Console Font** will override any/all console font settings.
 This only applies to any Doki Themes. You must enable the `Override Console Font` for this feature to take effect.
-
 
 # Miscellaneous
 
@@ -338,9 +345,9 @@ This only applies to any Doki Themes. You must enable the `Override Console Font
 
 ![Icons Preview](./assets/readmeAssets/doki_icons.png)
 
-Give your IDE that extra something with the [Doki Theme Icons](https://github.com/doki-theme/doki-theme-icons-jetbrains#doki-theme-icons-jetbrains).
-Custom tailored to work well with your favorite theme! 
-
+Give your IDE that extra something with
+the [Doki Theme Icons](https://github.com/doki-theme/doki-theme-icons-jetbrains#doki-theme-icons-jetbrains).
+Custom tailored to work well with your favorite theme!
 
 ## Contributing
 
@@ -357,7 +364,8 @@ to browse the `Look and Feel`.
 
 ## Plugin Art
 
-In order to prevent this plugin from being a huge artifact, the assets used for the background and stickers are downloaded from https://doki.assets.unthrottled.io when needed.
+In order to prevent this plugin from being a huge artifact, the assets used for the background and stickers are
+downloaded from https://doki.assets.unthrottled.io when needed.
 This allows me to update the assets without users needing to update the plugin as well.
 
 I also have them committed to GitHub as well at https://github.com/doki-theme/doki-theme-assets .
@@ -365,7 +373,8 @@ You should be able to find what you are looking for in the `backgrounds/wallpape
 
 ## Theme Requests
 
-If you want your main squeeze to be featured in the Doki Theme suite, feel free to [submit a theme request](https://github.com/doki-theme/doki-master-theme/issues).
+If you want your main squeeze to be featured in the Doki Theme suite, feel free
+to [submit a theme request](https://github.com/doki-theme/doki-master-theme/issues).
 
 ## Enjoying the plugin?
 
@@ -373,17 +382,21 @@ Great! I am glad you like it!
 
 Be sure to ⭐ and share it with other weebs!
 
-Also, giving it a good [review on the plugins page](https://plugins.jetbrains.com/plugin/10804-doki-doki-literature-club-theme) will help this plugin become visible to more otaku!
+Also, giving it a
+good [review on the plugins page](https://plugins.jetbrains.com/plugin/10804-doki-doki-literature-club-theme) will help
+this plugin become visible to more otaku!
 
 ## Contributions?
 
-I think your voice needs to be heard! You probably have good ideas, so feel free to submit your feedback as [an issue](https://github.com/doki-theme/doki-theme-jetbrains/issues/new).
+I think your voice needs to be heard! You probably have good ideas, so feel free to submit your feedback
+as [an issue](https://github.com/doki-theme/doki-theme-jetbrains/issues/new).
 
 Help make this plugin better!
 
 ## Release channel
 
-Want updates sooner? I have a [canary release channel](https://github.com/Unthrottled/jetbrains-plugin-repository) that you can set up to get the latest and greatest!
+Want updates sooner? I have a [canary release channel](https://github.com/Unthrottled/jetbrains-plugin-repository) that
+you can set up to get the latest and greatest!
 
 ## Changelog
 
