@@ -1,5 +1,17 @@
 Changelog
+
 ---
+
+#  88.5-1.18.0-thargelion [2025.3 Build Support]
+
+- Lowest supported version is now 2025.3
+- Compiles to the 2025.3 build
+
+#  88.5-1.17.0-thargelion [2025.2 Build Support]
+
+- Lowest supported version is now 2025.2
+- Compiles to the 2025.2 build
+
 #  88.5-1.16.0 [2025.1 Build Support]
 
 - Lowest supported version is now 2025.1
