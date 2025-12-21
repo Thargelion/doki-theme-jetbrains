@@ -3,6 +3,7 @@ package io.unthrottled.doki.notification
 import com.intellij.ide.plugins.PluginManager
 import com.intellij.ide.plugins.PluginManagerCore.getPlugin
 import com.intellij.notification.Notification
+import com.intellij.notification.NotificationGroup
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationListener
 import com.intellij.notification.NotificationType
@@ -28,7 +29,6 @@ import io.unthrottled.doki.util.runSafely
 import io.unthrottled.doki.util.toHexString
 import org.intellij.lang.annotations.Language
 import org.jetbrains.annotations.Nls
-import java.awt.Color
 
 @Suppress("LongMethod", "MaxLineLength", "UnexpectedIndentation")
 @Language("HTML")
@@ -45,7 +45,7 @@ private fun buildUpdateMessage(
   val darkerAccentColor = ColorUtil.darker(accentColor, 1).toHexString()
   val accentHex = accentColor.toHexString()
   val strokeColor =
-    JBColor.namedColor("Doki.Icon.Accent.Contrast.color", Color.WHITE)
+    JBColor.namedColor("Doki.Icon.Accent.Contrast.color", JBColor.WHITE)
       .toHexString()
   val infoForegroundHex = UIUtil.getContextHelpForeground().toHexString()
   val background =
@@ -220,8 +220,6 @@ private fun buildUpdateMessage(
           }
         </style>
         <script>
-          let previousListener;
-
           function drawBackground() {
             const backgroundCanvas = document.getElementById(
               "backgroundImage"
@@ -311,11 +309,13 @@ fun getAnchor(position: IdeBackgroundUtil.Anchor): String {
 }
 
 object UpdateNotification : Logging {
-  private val notificationGroup =
-    NotificationGroupManager.getInstance()
-      .getNotificationGroup("Doki Theme Updates")
-
   private val defaultListener = NotificationListener.UrlOpeningListener(false)
+
+  private fun getNotificationGroup(): NotificationGroup {
+    return NotificationGroupManager
+      .getInstance()
+      .getNotificationGroup("Doki Theme Updates")
+  }
 
   fun showDokiNotification(
     @Nls(capitalization = Nls.Capitalization.Sentence) title: String = "",
@@ -335,7 +335,7 @@ object UpdateNotification : Logging {
     actions: List<AnAction>,
   ): Notification {
     val notification =
-      notificationGroup.createNotification(
+      getNotificationGroup().createNotification(
         content,
         NotificationType.INFORMATION,
       )
