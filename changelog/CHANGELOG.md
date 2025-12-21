@@ -6,6 +6,7 @@ Changelog
 
 - Access notification manager un runtime to comply with SDK specifications. (Use instance of service on demand instead
   of statically)
+- Do not set listener on notification
 
 # 88.5-1.18.0-thargelion [2025.3 Build Support]
 
