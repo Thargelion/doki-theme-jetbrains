@@ -2,22 +2,27 @@ Changelog
 
 ---
 
-#  88.5-1.18.0-thargelion [2025.3 Build Support]
+# 88.5-1.18.1-thargelion
+
+- Access notification manager un runtime to comply with SDK specifications. (Use instance of service on demand instead
+  of statically)
+
+# 88.5-1.18.0-thargelion [2025.3 Build Support]
 
 - Lowest supported version is now 2025.3
 - Compiles to the 2025.3 build
 
-#  88.5-1.17.0-thargelion [2025.2 Build Support]
+# 88.5-1.17.0-thargelion [2025.2 Build Support]
 
 - Lowest supported version is now 2025.2
 - Compiles to the 2025.2 build
 
-#  88.5-1.16.0 [2025.1 Build Support]
+# 88.5-1.16.0 [2025.1 Build Support]
 
 - Lowest supported version is now 2025.1
 - Compiles to the 2025.1 build
 
-#  88.5-1.15.0 [2024.3 Build Support]
+# 88.5-1.15.0 [2024.3 Build Support]
 
 - Lowest supported version is now 2024.3
 - Compiles to the 2024.3 build
@@ -74,7 +79,7 @@ Changelog
 # 88.3-1.9.1 [Bug Fixes]
 
 - Themed New UI Scrollbars in Rider to be consistent.
-- Fixed the settings window in builds `231.6890.12`+ 
+- Fixed the settings window in builds `231.6890.12`+
 
 # 88.3-1.9.0 [EXP UI Search Field Fix]
 
@@ -86,10 +91,9 @@ Changelog
 - Updated the border color of the `Code Lens` feature.
 - Updated contributing documentation for new build process requirements.
 
-
 # 88.3-1.8.2 [Initial 2023.1 Build Support]
 
-- Added the initial 2023.1 build support. 
+- Added the initial 2023.1 build support.
 
 # 88.3-1.8.1 [Global Font Fix]
 
@@ -134,7 +138,8 @@ Changelog
 <img src="https://doki.assets.unthrottled.io/misc/doki_icons_logo.png" width="256" height="256" alt="Doki Theme Icons"></img>
 </div>
 
-- Removed the legacy Material Icons. Please install the [Doki Theme Icons](https://github.com/doki-theme/doki-theme-icons-jetbrains) in its place. 
+- Removed the legacy Material Icons. Please install
+  the [Doki Theme Icons](https://github.com/doki-theme/doki-theme-icons-jetbrains) in its place.
 - Renamed plugin to `Doki Theme` & updated plugin logo.
 - Zero Two's Obsidian theme is now the default for new users.
 - Updated Chocola's Xmas theme.
@@ -142,11 +147,11 @@ Changelog
 
 # 88.1-1.5.4 [Better Icon Loading]
 
-- Potentially fixed icon loading issue at start up. 
+- Potentially fixed icon loading issue at start up.
 
 # 88.1-1.5.3 [VCS Diff]
 
-- Themed the new `Diff & Merge` `Folded unchanged fragments` `Wave` separator.  
+- Themed the new `Diff & Merge` `Folded unchanged fragments` `Wave` separator.
 
 # 88.1-1.5.2 [Radio Button Fix]
 
@@ -158,7 +163,8 @@ Changelog
 
 # 88.1-1.5.0 [Restored Cold Folding Outline]
 
-- Made the vertical code folding lines, in the gutter, visible again. If you want them gone, like they were before, you can turn them off by going to the setting "`Editor` > `General` > `Code Folding` > `Show code folding outline`". 
+- Made the vertical code folding lines, in the gutter, visible again. If you want them gone, like they were before, you
+  can turn them off by going to the setting "`Editor` > `General` > `Code Folding` > `Show code folding outline`".
 
 # 88.1-1.4.0 [Rimuru]
 
@@ -174,9 +180,13 @@ _Zero Two's Not Just A Cutie. ;)_
 
 **4 New Themes!**
 
-- I decided that I didn't have enough Zero Two themes, so I fixed that. She now has a new top-tier dark hacker theme: `Obsidian`. I also felt like Red Zero Two doesn't get enough attention, so I added a light `Sakura` theme which features her as she was as a child. With all these new Zero Two themes, I thought it would be best to rename the existing dark & light themes to \`Rose\` & \`Lily\` respectively.
+- I decided that I didn't have enough Zero Two themes, so I fixed that. She now has a new top-tier dark hacker theme:
+  `Obsidian`. I also felt like Red Zero Two doesn't get enough attention, so I added a light `Sakura` theme which
+  features her as she was as a child. With all these new Zero Two themes, I thought it would be best to rename the
+  existing dark & light themes to \`Rose\` & \`Lily\` respectively.
 - It wouldn't be the _Darling_ release if I didn't include Hiro as well. (Dark Theme)
-- Lastly, this is the first release with a duo theme! (Nao's doesn't count, I just wanted the melon meme.) Just to pad my Zero Two theme stats, I've now got a Hiro & Zero Two couples' dark theme.
+- Lastly, this is the first release with a duo theme! (Nao's doesn't count, I just wanted the melon meme.) Just to pad
+  my Zero Two theme stats, I've now got a Hiro & Zero Two couples' dark theme.
 
 ### Other Stuff
 
@@ -188,7 +198,9 @@ _Zero Two's Not Just A Cutie. ;)_
 
 # 84.1-1.3.0 [Small Fixes n Stuff]
 
-- Added themed [Rainbow Brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets) that match the [VSCode Bracket Match](https://github.com/doki-theme/doki-theme-vscode/blob/main/CHANGELOG.md#782-110-themed-bracket-pair-colorization), for the most part.
+- Added themed [Rainbow Brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets) that match
+  the [VSCode Bracket Match](https://github.com/doki-theme/doki-theme-vscode/blob/main/CHANGELOG.md#782-110-themed-bracket-pair-colorization),
+  for the most part.
 - Raised lowest supported IDE build to `211.7628.21`.
 - Fixed usability problems for: Beatrice, C.C., & Sayori Dark.
 - Fixed the VCS Log inactive color & some other stuff.
@@ -197,15 +209,21 @@ _Zero Two's Not Just A Cutie. ;)_
 
 ![v84 Girls](https://doki.assets.unthrottled.io/misc/v84_girls.png)
 
-This release is not for my Dark Theme Normies. Dark themes are nice, but I like Light Themes too (and my Dark Theme Normies). I'm currently trying new things out. Sorry in advance if I made your eyes bleed. I might tweak some of them as time goes on, still not 100% on what looks good & also is a fun color.
+This release is not for my Dark Theme Normies. Dark themes are nice, but I like Light Themes too (and my Dark Theme
+Normies). I'm currently trying new things out. Sorry in advance if I made your eyes bleed. I might tweak some of them as
+time goes on, still not 100% on what looks good & also is a fun color.
 
 **6 New Light Themes!**
 
-- Tired & broken down programmers rejoice! Even though you will never be pampered by a real Fox-demigod, you can now at least code with one. Let "The Helpful Fox Senko-san" watch over you as complete your tickets. You can almost feel the "おかえりなのじゃ" you will never get 😭
-- I decided to complete my Quintessential Quintuplets collection by adding the oldest and youngest quint: Nakano Ichika & Nakano Itsuki.
+- Tired & broken down programmers rejoice! Even though you will never be pampered by a real Fox-demigod, you can now at
+  least code with one. Let "The Helpful Fox Senko-san" watch over you as complete your tickets. You can almost feel
+  the "おかえりなのじゃ" you will never get 😭
+- I decided to complete my Quintessential Quintuplets collection by adding the oldest and youngest quint: Nakano
+  Ichika & Nakano Itsuki.
 - Tomori Nao, from Charlotte, has an interesting dichotomy when it comes to her personality. She is super cute tho.
 - Have I ever seen Code Geass? No. Can I appreciate C.C. without having seen the anime? Yeah buddy.
-- Guess while I'm talking about "anime I haven't seen but, chose to make a theme because the girl is pretty." We now have Yuzuriha Inori from Guilty Crown.
+- Guess while I'm talking about "anime I haven't seen but, chose to make a theme because the girl is pretty." We now
+  have Yuzuriha Inori from Guilty Crown.
 
 ### Other Stuff
 
@@ -224,7 +242,8 @@ This release is not for my Dark Theme Normies. Dark themes are nice, but I like 
 
 # 78.2-1.1.1 [Sticker Bug Fix]
 
-- Fixed issue where the previous theme's sticker would _stick around_ behind the current theme's sticker. <sup><sup>I'll see myself out</sup></sup>
+- Fixed issue where the previous theme's sticker would _stick around_ behind the current theme's sticker. <sup><sup>I'll
+  see myself out</sup></sup>
 
 # 78.2-1.1.0 [Hover to hide sticker]
 
@@ -1317,10 +1336,12 @@ for any inconveniences this may cause.
 - Addressed all reported thrown exceptions.
   - Thanks all for bringing them to my attention!
   - Issues Fixed
-    - `java.lang.NullPointerException at com.intellij.openapi.wm.impl.IdeRootPane.updateToolbarVisibility(IdeRootPane.java:298)`
+    -
+    `java.lang.NullPointerException at com.intellij.openapi.wm.impl.IdeRootPane.updateToolbarVisibility(IdeRootPane.java:298)`
     - `java.lang.NullPointerException at com.chrisrm.ideaddlc.ui.MTTreeUI.paintRow(MTTreeUI.java:164)`
     - `java.lang.NullPointerException at com.chrisrm.ideaddlc.ui.MTTreeUI.paintRow(MTTreeUI.java:166)`
-    - `com.intellij.openapi.extensions.impl.PicoPluginExtensionInitializationException: org/jetbrains/coverage/gnu/trove/THashMap at com.intellij.openapi.extensions.impl.ExtensionComponentAdapter.createInstance(ExtensionComponentAdapter.java:50)`
+    -
+    `com.intellij.openapi.extensions.impl.PicoPluginExtensionInitializationException: org/jetbrains/coverage/gnu/trove/THashMap at com.intellij.openapi.extensions.impl.ExtensionComponentAdapter.createInstance(ExtensionComponentAdapter.java:50)`
 
 # 4.3.0
 
@@ -1432,7 +1453,8 @@ for any inconveniences this may cause.
 # 3.2.1
 
 - Fixed settings bug where
-  the `Ḑ̶͍̲̳̫͗̚͠ą̵͉̠̬͙̤͚̯̈͆͆ŗ̴̧̱̾̑k̷̨̹̯̳͕͍̖̰͕̱̟̯̝̓̂̆͌̈́͂̇̅͠͝ ̶̹͙͓͉͔͇͎̼̯̺̻̥͑͒̈͛̇̕͠M̷̨̨̡͖̭̼̲̞̹̺͉̐́̔̔̆̒̾́̑̕͜o̴͙͓͓͈̫̣͔̗̝̾̂̅̅̂̀̔̕͜d̶̲̤̜͆̽͘ę̸͎̪̭̭̣͎̠̎̀͌̋̓̏̏̐̕͜ͅ`
+  the
+  `Ḑ̶͍̲̳̫͗̚͠ą̵͉̠̬͙̤͚̯̈͆͆ŗ̴̧̱̾̑k̷̨̹̯̳͕͍̖̰͕̱̟̯̝̓̂̆͌̈́͂̇̅͠͝ ̶̹͙͓͉͔͇͎̼̯̺̻̥͑͒̈͛̇̕͠M̷̨̨̡͖̭̼̲̞̹̺͉̐́̔̔̆̒̾́̑̕͜o̴͙͓͓͈̫̣͔̗̝̾̂̅̅̂̀̔̕͜d̶̲̤̜͆̽͘ę̸͎̪̭̭̣͎̠̎̀͌̋̓̏̏̐̕͜ͅ`
   option did not switch on or off _Ḑ̶͍̲̳̫͗̚͠ą̵͉̠̬͙̤͚̯̈͆͆ŗ̴̧̱̾̑k̷̨̹̯̳͕͍̖̰͕̱̟̯̝̓̂̆͌̈́͂̇̅͠͝
   ̶̹͙͓͉͔͇͎̼̯̺̻̥͑͒̈͛̇̕͠M̷̨̨̡͖̭̼̲̞̹̺͉̐́̔̔̆̒̾́̑̕͜o̴͙͓͓͈̫̣͔̗̝̾̂̅̅̂̀̔̕͜d̶̲̤̜͆̽͘ę̸͎̪̭̭̣͎̠̎̀͌̋̓̏̏̐̕͜ͅ_
 
