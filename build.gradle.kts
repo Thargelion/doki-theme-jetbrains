@@ -56,6 +56,14 @@ configurations {
     // with the platform slf4j
     exclude("org.slf4j")
   }
+  // Force kotlinx-coroutines-core to a version that matches IntelliJ 2026.1's API expectations.
+  // IntelliJ 2026.1 bundles 1.10.2-intellij-1 whose AgentPremain calls
+  // getEnableCreationStackTraces$kotlinx_coroutines_core(); the test classpath default (1.6.4)
+  // only has getEnableCreationStackTraces() causing a JVM crash at agent load time.
+  all {
+    resolutionStrategy.force("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    resolutionStrategy.force("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0")
+  }
 }
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
@@ -99,6 +107,7 @@ tasks {
   patchPluginXml {
     dependsOn("buildThemes")
   }
+
 //  publishPlugin {
 //    dependsOn(patchChangelog)
 //  }
