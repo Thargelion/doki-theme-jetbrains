@@ -106,6 +106,24 @@ tasks {
 
   patchPluginXml {
     dependsOn("buildThemes")
+    changeNotes.set("""
+      <h3>88.5-1.19.1</h3>
+      <ul>
+        <li>Fix <code>repaintWindows</code>: wrap <code>repaintAllWindows()</code> inside <code>invokeLater</code> to ensure UI repaint runs on EDT</li>
+      </ul>
+      <h3>88.5-1.19.0 — 2026.1 Build Support</h3>
+      <ul>
+        <li>Lowest supported version is now 2026.1</li>
+        <li>Compiles to the 2026.1 build</li>
+        <li>Upgrade Gradle to 9.4.1, IntelliJ Platform plugin to 2.13.1, Kotlin to 2.3.0</li>
+        <li>Force <code>kotlinx-coroutines-core</code> to 1.9.0 to prevent JVM crash with IntelliJ 2026.1 agent</li>
+      </ul>
+      <h3>88.5-1.18.1</h3>
+      <ul>
+        <li>Access notification manager at runtime to comply with SDK specifications</li>
+        <li>Do not set listener on notification</li>
+      </ul>
+    """.trimIndent())
   }
 
 //  publishPlugin {
