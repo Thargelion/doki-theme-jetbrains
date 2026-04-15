@@ -234,8 +234,8 @@ class StickerPaneService {
 }
 
 fun repaintWindows() =
-  runSafely({
-    ApplicationManager.getApplication().invokeLater {
+  ApplicationManager.getApplication().invokeLater {
+    runSafely({
       IdeBackgroundUtil.repaintAllWindows()
-    }
-  })
+    })
+  }

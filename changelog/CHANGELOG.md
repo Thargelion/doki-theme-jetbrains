@@ -2,6 +2,19 @@ Changelog
 
 ---
 
+# 88.5-1.19.1-thargelion
+
+- Fix `repaintWindows`: wrap `repaintAllWindows()` inside `invokeLater` to ensure UI repaint runs on EDT
+
+# 88.5-1.19.0-thargelion [2026.1 Build Support]
+
+- Lowest supported version is now 2026.1
+- Compiles to the 2026.1 build
+- Upgrade Gradle to 9.4.1, IntelliJ Platform plugin to 2.13.1, Kotlin to 2.3.0
+- Force `kotlinx-coroutines-core` to 1.9.0 to prevent JVM crash with IntelliJ 2026.1 agent
+- Migrate deprecated `groovy.util.XmlParser/XmlNodePrinter` to `groovy.xml` package
+- Replace deprecated `toLowerCase()` with `lowercase()`
+
 # 88.5-1.18.1-thargelion
 
 - Access notification manager un runtime to comply with SDK specifications. (Use instance of service on demand instead
