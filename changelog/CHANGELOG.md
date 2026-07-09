@@ -2,6 +2,10 @@ Changelog
 
 ---
 
+# 88.5-1.19.2-thargelion
+
+- Fix `IllegalStateException: An editable copy of Default has not been initialized` by wrapping `EditorColorsManager.schemeForCurrentUITheme` calls in `XPathListener`, `CustomFontSizeService`, and `ConsoleFontService` with `runSafely`
+
 # 88.5-1.19.1-thargelion
 
 - Fix `repaintWindows`: wrap `repaintAllWindows()` inside `invokeLater` to ensure UI repaint runs on EDT

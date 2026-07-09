@@ -8,29 +8,36 @@ import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 import io.unthrottled.doki.themes.ThemeManager
+import io.unthrottled.doki.util.Logging
 import io.unthrottled.doki.util.doOrElse
+import io.unthrottled.doki.util.logger
+import io.unthrottled.doki.util.runSafely
 import org.intellij.plugins.xpathView.Config
 import org.intellij.plugins.xpathView.XPathAppComponent
 
-class XPathListener : LafManagerListener, ProjectActivity {
+class XPathListener : LafManagerListener, ProjectActivity, Logging {
   override fun lookAndFeelChanged(source: LafManager) {
     installColors()
   }
 
   private fun installColors() {
     ThemeManager.instance.currentTheme.doOrElse({
-      val schemeForCurrentUITheme = EditorColorsManager.getInstance().schemeForCurrentUITheme
-      XPathAppComponent.getInstance().config.attributes.backgroundColor =
-        schemeForCurrentUITheme.getColor(
-          EditorColors.SELECTION_BACKGROUND_COLOR,
-        )
-      XPathAppComponent.getInstance().config.attributes.foregroundColor =
-        schemeForCurrentUITheme.getColor(
-          EditorColors.SELECTION_FOREGROUND_COLOR,
-        )
+      runSafely({
+        val schemeForCurrentUITheme = EditorColorsManager.getInstance().schemeForCurrentUITheme
+        XPathAppComponent.getInstance().config.attributes.backgroundColor =
+          schemeForCurrentUITheme.getColor(
+            EditorColors.SELECTION_BACKGROUND_COLOR,
+          )
+        XPathAppComponent.getInstance().config.attributes.foregroundColor =
+          schemeForCurrentUITheme.getColor(
+            EditorColors.SELECTION_FOREGROUND_COLOR,
+          )
 
-      XPathAppComponent.getInstance().config.contextAttributes.backgroundColor =
-        IDENTIFIER_UNDER_CARET_ATTRIBUTES.defaultAttributes.backgroundColor
+        XPathAppComponent.getInstance().config.contextAttributes.backgroundColor =
+          IDENTIFIER_UNDER_CARET_ATTRIBUTES.defaultAttributes.backgroundColor
+      }) {
+        logger().warn("Unable to install XPath colors", it)
+      }
     }) {
       val config = Config()
       XPathAppComponent.getInstance().config.attributes.backgroundColor = config.attributes.backgroundColor
