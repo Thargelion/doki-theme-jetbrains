@@ -107,6 +107,10 @@ tasks {
   patchPluginXml {
     dependsOn("buildThemes")
     changeNotes.set("""
+      <h3>88.5-1.20.0 — 2026.2 Build Support</h3>
+      <ul>
+        <li>Extend compatibility range to support 2026.2 builds</li>
+      </ul>
       <h3>88.5-1.19.1</h3>
       <ul>
         <li>Fix <code>repaintWindows</code>: wrap <code>repaintAllWindows()</code> inside <code>invokeLater</code> to ensure UI repaint runs on EDT</li>
