@@ -1,5 +1,10 @@
 Changelog
 
+# 88.5-1.20.0-thargelion [2026.2 Build Support]
+
+- Extend compatibility range to support 2026.2 builds
+- Depend on `com.intellij.modules.jcef` (bundled) to satisfy 2026.2 platform requirements
+
 ---
 
 # 88.5-1.19.1-thargelion
