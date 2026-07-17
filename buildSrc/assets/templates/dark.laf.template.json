@@ -10,5 +10,20 @@
     "Notification.ToolWindow.informativeForeground": "#baeeba",
     "Notification.ToolWindow.warningForeground": "#f9f78e",
     "Notification.ToolWindow.errorForeground": "#ffcccc"
+  },
+  "icons": {
+    "ColorPalette": {
+      "Checkbox.Background.Default": "#00000000",
+      "Checkbox.Border.Default": "baseIconColor",
+      "Checkbox.Background.Selected": "#00000000",
+      "Checkbox.Border.Selected": "baseIconColor",
+      "Checkbox.Foreground.Selected": "accentColor",
+      "Checkbox.Background.Disabled": "#00000000",
+      "Checkbox.Border.Disabled": "baseIconColor",
+      "Checkbox.Foreground.Disabled": "baseIconColor",
+      "Checkbox.Focus.Thin.Default": "accentColor",
+      "Checkbox.Focus.Thin.Selected": "accentColor",
+      "Checkbox.Focus.Wide": "accentColor"
+    }
   }
 }

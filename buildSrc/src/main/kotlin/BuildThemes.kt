@@ -47,7 +47,6 @@ import java.util.TreeMap
 import java.util.stream.Collectors
 
 data class JetbrainsThemeOnlyDefinition(
-  val id: String,
   val name: String,
   val dark: Boolean,
   val author: String?,
@@ -249,7 +248,6 @@ open class BuildThemes : DefaultTask() {
 
     val colors = validateColors(masterThemeDefinition, resolvedNamedColors)
     val finalTheme = JetbrainsThemeOnlyDefinition(
-      id = masterThemeDefinition.id,
       name = "${getLafNamePrefix(masterThemeDefinition.group)}${masterThemeDefinition.name}",
       dark = masterThemeDefinition.dark,
       author = masterThemeDefinition.author,
