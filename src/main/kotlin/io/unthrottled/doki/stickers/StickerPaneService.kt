@@ -1,5 +1,6 @@
 package io.unthrottled.doki.stickers
 
+import com.intellij.diagnostic.LoadingState
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.ui.DialogWrapperDialog
 import com.intellij.openapi.wm.impl.IdeBackgroundUtil
@@ -235,6 +236,9 @@ class StickerPaneService {
 
 fun repaintWindows() =
   ApplicationManager.getApplication().invokeLater {
+    // ponytail: repainting before the app finishes loading crashes on the
+    // editor color scheme not being ready yet (see #362-style first-install error)
+    if (!LoadingState.APP_STARTED.isOccurred) return@invokeLater
     runSafely({
       IdeBackgroundUtil.repaintAllWindows()
     })
