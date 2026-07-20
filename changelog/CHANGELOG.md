@@ -1,5 +1,12 @@
 Changelog
 
+# 88.5-1.20.1-thargelion
+
+- Fix `repaintWindows`: skip repaint before the app finishes loading, preventing a first-install error when the editor
+  color scheme isn't ready yet
+
+---
+
 # 88.5-1.20.0-thargelion [2026.2 Build Support]
 
 - Extend compatibility range to support 2026.2 builds
