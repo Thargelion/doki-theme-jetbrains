@@ -1,5 +1,15 @@
 Changelog
 
+# 88.5-1.21.0-thargelion [2026.3 Build Support]
+
+- Extend compatibility range to support 2026.3 builds
+- Bundle `jackson-databind`, no longer exposed by the 2026.3 platform
+- Compile with JDK 25 (Java 21 bytecode target), upgrade IntelliJ Platform Gradle Plugin to 2.20.0 and foojay resolver to
+  1.0.0
+- Plugin verification limited to 2026.1 and 2026.3; internal API usages no longer fail `verifyPlugin`
+
+---
+
 # 88.5-1.20.1-thargelion
 
 - Fix `repaintWindows`: skip repaint before the app finishes loading, preventing a first-install error when the editor
