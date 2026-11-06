@@ -1,4 +1,6 @@
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 
 plugins {
   // Custom plugin for building all the themes
@@ -13,7 +15,15 @@ version = providers.gradleProperty("pluginVersion").get()
 
 // Set the JVM language level used to build the project.
 kotlin {
-  jvmToolchain(21)
+  jvmToolchain(25)
+}
+
+tasks.withType<JavaCompile> {
+  options.release.set(21)
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+  compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
 }
 
 // Configure project's dependencies
@@ -31,6 +41,7 @@ dependencies {
   implementation("commons-io:commons-io:2.15.1")
   implementation("org.javassist:javassist:3.29.2-GA")
   implementation("io.sentry:sentry:6.28.0")
+  implementation("com.fasterxml.jackson.core:jackson-databind:2.18.2")
   testImplementation("org.assertj:assertj-core:3.25.3")
   testImplementation("io.mockk:mockk:1.13.8")
   testImplementation(libs.junit)
@@ -93,8 +104,14 @@ intellijPlatform {
   }
 
   pluginVerification {
+    failureLevel = listOf(
+      VerifyPluginTask.FailureLevel.COMPATIBILITY_PROBLEMS,
+      VerifyPluginTask.FailureLevel.INVALID_PLUGIN,
+      VerifyPluginTask.FailureLevel.MISSING_DEPENDENCIES,
+    )
     ides {
-      recommended()
+      create(IntelliJPlatformType.IntellijIdeaUltimate, "2026.1")
+      create(IntelliJPlatformType.IntellijIdeaUltimate, "2026.3")
     }
   }
 }
@@ -107,6 +124,12 @@ tasks {
   patchPluginXml {
     dependsOn("buildThemes")
     changeNotes.set("""
+      <h3>88.5-1.21.0 — 2026.3 Build Support</h3>
+      <ul>
+        <li>Extend compatibility range to support 2026.3 builds</li>
+        <li>Bundle <code>jackson-databind</code>, no longer exposed by the 2026.3 platform</li>
+        <li>Compile with JDK 25 (Java 21 bytecode), IntelliJ Platform plugin to 2.20.0</li>
+      </ul>
       <h3>88.5-1.20.0 — 2026.2 Build Support</h3>
       <ul>
         <li>Extend compatibility range to support 2026.2 builds</li>
